@@ -20,7 +20,7 @@ public ChessPiece [] [] getPieces(){
 	for (int i = 0 ; i < board.getRows();i++) {
 	  for(int j = 0; j < board.getColumns(); j ++) {
 		  
-	mat [i] [j] = (ChessPiece)board.pieces(i,j);	  
+	mat [i] [j] = (ChessPiece)board.piece(i,j);	  
 		
 	 }	
    }
@@ -29,7 +29,7 @@ public ChessPiece [] [] getPieces(){
 
 
 private void initialSetup() {
-	board.placepiece(new Rook(board,Color.WHITE), new Position(2,1));
+	board.placepiece(new Rook (board,Color.WHITE), new Position(0,7));
 	board.placepiece(new King(board,Color.BLACK),new Position(0,4));
 	board.placepiece(new King(board,Color.WHITE), new Position(7,4));
 }
