@@ -13,11 +13,13 @@ public class program {
 		Scanner sc = new Scanner(System.in);
 		
 		
-		ChessMatch chessmatch = new ChessMatch();
+		ChessMatch chessMatch = new ChessMatch();
 		
 		
 		while(true) {
-			UI.printBoard(chessmatch.getPieces());
+			
+			UI.clearScreen();
+			UI.printBoard(chessMatch.getPieces());
 			System.out.println();
 			System.out.print("source:");
 			ChessPosition source = UI.readChessPosition(sc);
@@ -26,7 +28,7 @@ public class program {
 			System.out.print("target:");
 			ChessPosition target = UI.readChessPosition(sc);
 			
-			ChessPiece capturedPiece = chessmatch.performChessMove(source,target);
+			ChessPiece capturedPiece = chessMatch.performChessMove(source,target);
 			
 		}
 		
