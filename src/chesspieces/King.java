@@ -87,6 +87,7 @@ public boolean[][] possibleMoves() {
 		
 		mat[p.getRow()][p.getColumn()] = true;
 	}
+    
 	return mat;
 	
 }
